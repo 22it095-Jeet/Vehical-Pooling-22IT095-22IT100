@@ -44,7 +44,7 @@ class login : AppCompatActivity() {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
             }
 
-                 login(email,password)
+            login(email,password)
         }
 
         edtSignUp.setOnClickListener {
@@ -61,7 +61,9 @@ class login : AppCompatActivity() {
                 if (task.isSuccessful) {
                     //code for login in user
                     val intent = Intent(this, MainActivity::class.java )
+                    finish()
                     startActivity(intent)
+
                 } else {
                     // If sign in fails, display a message to the u
                     Toast.makeText(this, "User does not exist or Incorrect password",Toast.LENGTH_SHORT).show()
